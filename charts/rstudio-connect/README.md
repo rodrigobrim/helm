@@ -83,7 +83,7 @@ The Helm `config` values are converted into the `rstudio-connect.gcfg` service c
 | launcher.contentInitContainer | object | `{"repository":"ghcr.io/rstudio/rstudio-connect-content-init","tag":""}` | Image definition for the RStudio Connect Content InitContainer |
 | launcher.contentInitContainer.repository | string | `"ghcr.io/rstudio/rstudio-connect-content-init"` | The repository to use for the Content InitContainer image |
 | launcher.contentInitContainer.tag | string | `""` | Overrides the image tag whose default is the chart appVersion. |
-| launcher.customRuntimeYaml | bool | `false` | Optional. The runtime.yaml definition of Kubernetes runtime containers. Defaults to "false," which pulls in the default runtime.yaml file. If changing this value, be careful to include the images that you have already used. |
+| launcher.customRuntimeYaml | bool | `false` | Optional. The runtime.yaml definition of Kubernetes runtime containers. Defaults to "false," which pulls in the default runtime.yaml file. If changing this value, be careful to include the images that you have already used. If set to "pro", will pull in the "pro" versions of the default runtime images (i.e. including the pro drivers at the cost of a larger image). |
 | launcher.enabled | bool | `false` | Whether to enable the launcher |
 | launcher.launcherKubernetesProfilesConf | object | `{}` | User definition of launcher.kubernetes.profiles.conf for job customization |
 | launcher.namespace | string | `""` | The namespace to launch sessions into. Uses the Release namespace by default |

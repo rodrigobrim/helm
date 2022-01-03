@@ -89,7 +89,9 @@ app.kubernetes.io/instance: {{ .Release.Name }}
 */}}
 {{- define "rstudio-connect.runtimeYaml" -}}
   {{- $runtimeYaml := .Values.launcher.customRuntimeYaml }}
-  {{- if $runtimeYaml }}
+  {{- if eq $runtimeYaml "pro" }}
+    {{- .Files.Get "default-runtime-pro.yaml" }}
+  {{- else if $runtimeYaml }}
     {{- /* Allow verbatim output */ -}}
     {{- if kindIs "string" $runtimeYaml }}
       {{- $runtimeYaml }}

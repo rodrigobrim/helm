@@ -1,3 +1,8 @@
+# 0.5.11
+
+- Allow specifying `defaultMode` for most/all configMap and secret mounts
+  - this _should_ be backwards compatible. Please let us know if any issues arise
+
 # 0.5.10
 
 - Fix ingress definition issues with older Kubernetes clusters ([#139](https://github.com/rstudio/helm/issues/139))

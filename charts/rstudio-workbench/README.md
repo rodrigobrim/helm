@@ -321,6 +321,7 @@ config:
 | affinity | object | `{}` |  |
 | args | list | `[]` | args is the pod container's run arguments. |
 | command | list | `[]` | command is the pod container's run command. By default, it uses the container's default. However, the chart expects a container using `supervisord` for startup |
+| config.defaultMode | object | `{"jobJsonOverrides":420,"pam":420,"prestart":493,"secret":384,"server":420,"session":420,"sessionSecret":272,"startup":493,"userProvisioning":384}` | defaultMode used for mounting the various configuration configmaps |
 | config.pam | object | `{}` | a map of pam config files. Will be mounted into the container directly / per file, in order to avoid overwriting system pam files |
 | config.profiles | object | `{}` | a map of server-scoped config files (akin to `config.server`), but with specific behavior that supports profiles. See README for more information. |
 | config.secret | object | `{"database.conf":{}}` | a map of secret, server-scoped config files. Mounted to `/mnt/secret-configmap/rstudio/` with 0600 permissions |

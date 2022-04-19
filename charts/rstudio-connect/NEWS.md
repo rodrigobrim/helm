@@ -1,3 +1,7 @@
+# 0.2.27
+
+- Update `rstudio-library` chart version. Add support for lists in INI file sections.
+
 # 0.2.26
 
 - Fix ingress definition issues with older Kubernetes clusters ([#139](https://github.com/rstudio/helm/issues/139))
